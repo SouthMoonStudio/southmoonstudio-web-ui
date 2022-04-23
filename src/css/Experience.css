@@ -1,0 +1,35 @@
+#experience-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#experience-container h2 {
+    color: var(--bs-danger);
+    text-align: center;
+    transition: all .5s ease-in-out;
+    margin: auto;
+    opacity: 0;
+    transform: translateX(50vw);
+    animation: experience-animation 1s ease-in-out 1 forwards;
+}
+
+#experience-container h3 {
+    margin: 1rem auto;
+    color: var(--bs-light);
+    text-align: center;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    transform: translateX(-50vw);
+    animation: experience-animation 1s ease-in-out 1 forwards;
+}
+
+@keyframes experience-animation {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

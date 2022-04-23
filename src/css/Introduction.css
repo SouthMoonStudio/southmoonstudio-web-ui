@@ -1,0 +1,33 @@
+#introduction-container {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    width:50%;
+    margin: auto;
+    animation: animate-introduction 1s ease-in-out .5s 1 forwards;
+            opacity: 0;
+            filter: blur(1rem);
+}
+
+@keyframes animate-introduction {
+    to {
+        opacity: 1;
+        filter: blur(0rem);
+    }
+}
+
+#introduction-container h1 {
+    color: var(--bs-danger);
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+
+#introduction-container h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: var(--bs-light);
+    text-align: center;
+    transition: all .5s ease-in-out;
+}

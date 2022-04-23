@@ -1,0 +1,67 @@
+#about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'one'
+        'two';
+    grid-gap: 2rem;
+    align-self:flex-start;
+    margin-top:2rem;
+    opacity: 0;
+    transform: translateX(-50vw);
+    perspective: 1200px;
+    animation: animate-about 1s ease-in-out .5s 1 forwards;
+}
+
+#profileimage {
+    grid-area: one;
+    width:50%;
+    min-width: 256px;
+    max-width: 512px;
+    border-radius:50%;
+    margin: auto;
+    transform-style: preserve-3d;
+    animation: profile-spin 10s ease-in-out 0s infinite normal;
+}
+
+#brief {
+    grid-area: two;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: min(60rem, 80vw);
+    margin:auto;
+    color:var(--bs-light);
+}
+
+#brief h2 {
+    margin-bottom: 1rem;
+    color: var(--bs-danger);
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-10rem);
+    animation: animate-about 1s ease-in-out 1.5s 1 forwards;
+}
+
+#brief p {
+    font-size: min(1rem, 2.5vw);
+    text-align: justify;
+    overflow:auto;
+    opacity: 0;
+    animation: animate-about 1s ease-in-out 2.5s 1 forwards;
+}
+
+@keyframes animate-about {
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+
+}
+
+@keyframes profile-spin {
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}

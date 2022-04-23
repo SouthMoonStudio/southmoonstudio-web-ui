@@ -1,0 +1,58 @@
+#mission-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    color: var(--bs-light);
+}
+
+#mission-container h2 {
+    margin-bottom: 1rem;
+    color: var(--bs-danger);
+    font-weight: bold;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    animation: mission-header-animation .5s ease-in-out 3.5s 1 forwards;
+}
+
+#mission-container p {
+    width: min(60rem, 80vw);
+    text-align: justify;
+    font-size: min(1rem, 2.5vw);
+}
+
+#mission-container p span {
+    opacity: 0;
+    animation: mission-text-animation .25s linear var(--delay) 1 forwards;
+}
+
+#mission-container h4 {
+    font-style: italic;
+    margin: 2rem auto;
+    text-align: center;
+    width: 50%;
+    color: var(--bs-gray-600);
+    opacity: 0;
+    transform: translateY(10rem);
+    animation: mission-quote-animation .5s ease-in-out .5s 1 forwards;
+}
+
+@keyframes mission-header-animation {
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes mission-text-animation {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mission-quote-animation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

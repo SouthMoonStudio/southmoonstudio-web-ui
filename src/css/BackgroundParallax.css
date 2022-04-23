@@ -1,0 +1,20 @@
+.particle {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--bs-danger);
+    filter: blur(calc(4rem*var(--depth)));
+    animation: particle-animation var(--speed) linear infinite normal;
+    transform-origin: 0% calc(1000%*var(--depth));
+    z-index: 1+var(--depth);
+}
+
+@keyframes particle-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(calc(360deg*var(--direction)));
+    }
+}

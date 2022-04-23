@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Background from "./components/Background";
+import BackgroundParallax from "./components/BackgroundParallax";
+import Gui from "./components/Gui";
+import SlideCollection from "./components/SlideCollection";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <ToastContainer theme='dark' />
+      <Background>
+        <BackgroundParallax />
+      </Background>
+      <Gui />
+      <SlideCollection />
+    </React.Fragment>
   );
 }
 
